@@ -30,40 +30,40 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="section-padding bg-muted/30">
-      <div className="max-w-7xl mx-auto container-padding">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-foreground">
+    <section id="servicos" className="section-padding bg-secondary/20">
+      <div className="max-w-6xl mx-auto container-padding">
+        <div className="text-center space-y-6 mb-20">
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground">
             Serviços
           </h2>
-          <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ofereco diferentes modalidades de atendimento para atender às suas necessidades 
-            e preferências de forma personalizada.
+          <div className="w-16 h-0.5 bg-primary/30 rounded-full mx-auto"></div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+            Ofereco diferentes modalidades de atendimento para atender às suas 
+            necessidades de forma personalizada e acolhedora.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-card p-8 rounded-2xl border border-border hover:shadow-lg smooth-transition group"
+              className="bg-white p-10 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group"
             >
-              <div className="space-y-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
-                  <service.icon className="w-8 h-8 text-primary" />
+              <div className="space-y-8">
+                <div className="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 smooth-transition">
+                  <service.icon className="w-10 h-10 text-primary" />
                 </div>
                 
-                <div className="space-y-3">
-                  <h3 className="text-xl font-serif text-foreground">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-serif text-foreground">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-light">
                     {service.description}
                   </p>
                 </div>
                 
-                <div className="pt-4 border-t border-border">
+                <div className="pt-4 border-t border-border/50">
                   <span className="text-sm font-medium text-primary">
                     Duração: {service.duration}
                   </span>
@@ -74,25 +74,31 @@ const Services = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center bg-card p-8 rounded-2xl border border-border">
-          <h3 className="text-xl font-serif text-foreground mb-4">
+        <div className="bg-white p-10 rounded-3xl border border-border/50">
+          <h3 className="text-2xl font-serif text-foreground mb-8 text-center">
             Informações Importantes
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
-            <div>
-              <strong className="text-foreground block mb-1">Horários</strong>
-              Segunda a sexta: 8h às 18h<br />
-              Sábados: 8h às 12h
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="space-y-3">
+              <strong className="text-foreground block text-lg">Horários</strong>
+              <p className="text-muted-foreground font-light">
+                Segunda a sexta: 8h às 18h<br />
+                Sábados: 8h às 12h
+              </p>
             </div>
-            <div>
-              <strong className="text-foreground block mb-1">Modalidades</strong>
-              Presencial e online<br />
-              Individual e casal
+            <div className="space-y-3">
+              <strong className="text-foreground block text-lg">Modalidades</strong>
+              <p className="text-muted-foreground font-light">
+                Presencial e online<br />
+                Individual e casal
+              </p>
             </div>
-            <div>
-              <strong className="text-foreground block mb-1">Abordagem</strong>
-              Terapia Cognitivo-Comportamental<br />
-              Técnicas humanísticas
+            <div className="space-y-3">
+              <strong className="text-foreground block text-lg">Abordagem</strong>
+              <p className="text-muted-foreground font-light">
+                Terapia Cognitivo-Comportamental<br />
+                Técnicas humanísticas
+              </p>
             </div>
           </div>
         </div>
