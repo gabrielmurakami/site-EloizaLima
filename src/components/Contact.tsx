@@ -1,0 +1,215 @@
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { MapPin, Phone, Mail, Instagram, Linkedin } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    
+    toast({
+      title: "Mensagem enviada!",
+      description: "Obrigada pelo contato. Responderei em breve.",
+    });
+    
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <section id="contato" className="section-padding bg-background">
+      <div className="max-w-7xl mx-auto container-padding">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif text-foreground">
+            Entre em Contato
+          </h2>
+          <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Estou aqui para ajudar. Entre em contato para tirar dúvidas ou agendar sua consulta.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Contact Form */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-serif text-foreground mb-6">
+                Envie uma Mensagem
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Nome *
+                    </label>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full"
+                      placeholder="Seu nome completo"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      Telefone
+                    </label>
+                    <Input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full"
+                      placeholder="(11) 99999-9999"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    E-mail *
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Mensagem *
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="w-full h-32 resize-none"
+                    placeholder="Conte um pouco sobre o que gostaria de conversar..."
+                  />
+                </div>
+                
+                <Button type="submit" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
+                  Enviar Mensagem
+                </Button>
+              </form>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-serif text-foreground mb-6">
+                Informações de Contato
+              </h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Localização</h4>
+                    <p className="text-muted-foreground">
+                      Rua das Flores, 123 - Sala 45<br />
+                      Centro, São Paulo - SP<br />
+                      CEP: 01234-567
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Telefone</h4>
+                    <p className="text-muted-foreground">
+                      (11) 99999-9999<br />
+                      Segunda a sexta: 8h às 18h<br />
+                      Sábados: 8h às 12h
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">E-mail</h4>
+                    <p className="text-muted-foreground">
+                      contato@dranasilva.com.br
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div>
+              <h4 className="font-medium text-foreground mb-4">Siga-me nas redes sociais</h4>
+              <div className="flex space-x-4">
+                <a 
+                  href="https://instagram.com/dranasilva" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
+                >
+                  <Instagram className="w-6 h-6 text-primary" />
+                </a>
+                <a 
+                  href="https://linkedin.com/in/dranasilva" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
+                >
+                  <Linkedin className="w-6 h-6 text-primary" />
+                </a>
+              </div>
+            </div>
+
+            {/* Privacy Note */}
+            <div className="bg-muted/50 p-6 rounded-xl">
+              <h4 className="font-medium text-foreground mb-2">Privacidade e Sigilo</h4>
+              <p className="text-sm text-muted-foreground">
+                Todas as informações compartilhadas são tratadas com total sigilo e confidencialidade, 
+                conforme o Código de Ética do Psicólogo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
