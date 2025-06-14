@@ -1,24 +1,26 @@
-
-import { Users, User, Video, MapPin } from 'lucide-react';
+import { Users, User, Video, MapPin } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: User,
       title: "Terapia Individual",
-      description: "Atendimento personalizado para questões como ansiedade, depressão, autoestima e desenvolvimento pessoal.",
+      description:
+        "Atendimento personalizado para questões como ansiedade, depressão, autoestima e desenvolvimento pessoal.",
       duration: "50 min",
     },
     {
       icon: Video,
       title: "Atendimento Online",
-      description: "Sessões por videochamada com a mesma qualidade do atendimento presencial, no conforto da sua casa.",
+      description:
+        "Sessões por videochamada com a mesma qualidade do atendimento presencial, no conforto da sua casa.",
       duration: "50 min",
     },
     {
       icon: MapPin,
       title: "Atendimento Presencial",
-      description: "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
+      description:
+        "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
       duration: "50 min",
     },
   ];
@@ -32,14 +34,14 @@ const Services = () => {
           </h2>
           <div className="w-16 h-0.5 bg-primary/30 rounded-full mx-auto"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
-            Ofereco diferentes modalidades de atendimento para atender às suas 
+            Ofereco diferentes modalidades de atendimento para atender às suas
             necessidades de forma personalizada e acolhedora.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white p-10 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group"
             >
@@ -47,7 +49,7 @@ const Services = () => {
                 <div className="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 smooth-transition">
                   <service.icon className="w-10 h-10 text-primary" />
                 </div>
-                
+
                 <div className="space-y-4">
                   <h3 className="text-2xl font-serif text-foreground">
                     {service.title}
@@ -56,7 +58,7 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-                
+
                 <div className="pt-4 border-t border-border/50">
                   <span className="text-sm font-medium text-primary">
                     Duração: {service.duration}
@@ -74,23 +76,32 @@ const Services = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">Horários</strong>
+              <strong className="text-foreground block text-lg">
+                Horários
+              </strong>
               <p className="text-muted-foreground font-light">
-                Segunda a sexta: 8h às 18h<br />
-                Sábados: 8h às 12h
+                Segunda a sexta: 18h às 21h
+                <br />
+                Sábados: 9h às 12h
               </p>
             </div>
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">Modalidades</strong>
+              <strong className="text-foreground block text-lg">
+                Modalidades
+              </strong>
               <p className="text-muted-foreground font-light">
-                Presencial e online<br />
+                Presencial e online
+                <br />
                 Individual e casal
               </p>
             </div>
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">Abordagem</strong>
+              <strong className="text-foreground block text-lg">
+                Abordagem
+              </strong>
               <p className="text-muted-foreground font-light">
-                Terapia Cognitivo-Comportamental<br />
+                Terapia Cognitivo-Comportamental
+                <br />
                 Técnicas humanísticas
               </p>
             </div>
