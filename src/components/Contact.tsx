@@ -63,7 +63,7 @@ const Contact = () => {
             Entre em Contato
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-foreground max-w-2xl mx-auto">
             Estou aqui para ajudar. Entre em contato para tirar dúvidas ou
             agendar sua consulta.
           </p>
@@ -92,7 +92,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full border-foreground placeholder-zinc-100"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full"
+                      className="w-full border-foreground"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full"
+                    className="w-full border-foreground"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full h-32 resize-none"
+                    className="w-full h-32 resize-none border-foreground"
                     placeholder="Conte um pouco sobre o que gostaria de conversar..."
                   />
                 </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">Telefone</h4>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground">
                       (11) 99999-9999
                       <br />
                       Segunda a sexta: 18h às 21h
@@ -205,9 +205,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">E-mail</h4>
-                    <p className="text-muted-foreground">
-                      contato@eloizalima.com.br
-                    </p>
+                    <p className="text-foreground">contato@eloizalima.com.br</p>
                   </div>
                 </div>
               </div>
@@ -243,7 +241,7 @@ const Contact = () => {
               <h4 className="font-medium text-foreground mb-2">
                 Privacidade e Sigilo
               </h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground">
                 Todas as informações compartilhadas são tratadas com total
                 sigilo e confidencialidade, conforme o Código de Ética do
                 Psicólogo.

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto container-padding">
         <div className="text-center space-y-8">
           {/* Logo */}
-          <div className="font-serif text-3xl font-medium text-primary">
+          <div className="font-serif text-3xl font-medium text-primary-foreground">
             Eloiza Lima
           </div>
           

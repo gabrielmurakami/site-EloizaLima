@@ -23,7 +23,7 @@ const About = () => {
           {/* Content */}
           <div className="space-y-10 order-1 lg:order-2">
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-serif text-foreground leading-tight">
+              <h2 className="text-4xl md:text-5xl font-serif text-primary-foreground leading-tight">
                 Sobre mim
               </h2>
               <div className="w-16 h-0.5 bg-primary/30 rounded-full"></div>
@@ -52,30 +52,30 @@ const About = () => {
             <div className="grid sm:grid-cols-3 gap-8 pt-6">
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <GraduationCap className="w-8 h-8 text-primary" />
+                  <GraduationCap className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Formação</h3>
+                  <h3 className="font-medium text-primary-foreground text-lg">Formação</h3>
                   <p className="text-sm text-muted-foreground font-light mt-1">Especialização em TCC</p>
                 </div>
               </div>
 
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <Heart className="w-8 h-8 text-primary" />
+                  <Heart className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Abordagem</h3>
+                  <h3 className="font-medium text-primary-foreground text-lg">Abordagem</h3>
                   <p className="text-sm text-muted-foreground font-light mt-1">Humanizada</p>
                 </div>
               </div>
 
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <Users className="w-8 h-8 text-primary" />
+                  <Users className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Experiência</h3>
+                  <h3 className="font-medium text-primary-foreground text-lg">Experiência</h3>
                   <p className="text-sm text-muted-foreground font-light mt-1">2+ anos</p>
                 </div>
               </div>
