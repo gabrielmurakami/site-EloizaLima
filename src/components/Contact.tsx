@@ -1,36 +1,57 @@
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Phone, Mail, Instagram, Linkedin } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
+import { fromTheme } from "tailwind-merge";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigada pelo contato. Responderei em breve.",
-    });
-    
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    console.log("Form submitted:", formData);
+
+    emailjs
+      .send(
+        "service_k0latgo",
+        "template_bcnrj78",
+        formData, // precisa bater com os campos definidos no template
+        "16D2yOXa_MNQ0p0yI" // sua chave pública
+      )
+      .then(() => {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Obrigada pelo contato. Responderei em breve.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar e-mail:", error);
+        toast({
+          title: "Erro ao enviar",
+          //description: "Tente novamente mais tarde.",
+          description: `Erro: ${JSON.stringify(error)}`,
+        });
+      });
+
+    // setFormData({ name: "", email: "", phone: "", message: "" });SSS
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -43,7 +64,8 @@ const Contact = () => {
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estou aqui para ajudar. Entre em contato para tirar dúvidas ou agendar sua consulta.
+            Estou aqui para ajudar. Entre em contato para tirar dúvidas ou
+            agendar sua consulta.
           </p>
         </div>
 
@@ -57,7 +79,10 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Nome *
                     </label>
                     <Input
@@ -72,7 +97,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Telefone
                     </label>
                     <Input
@@ -86,9 +114,12 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     E-mail *
                   </label>
                   <Input
@@ -102,9 +133,12 @@ const Contact = () => {
                     placeholder="seu@email.com"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Mensagem *
                   </label>
                   <Textarea
@@ -117,8 +151,11 @@ const Contact = () => {
                     placeholder="Conte um pouco sobre o que gostaria de conversar..."
                   />
                 </div>
-                
-                <Button type="submit" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
+
+                <Button
+                  type="submit"
+                  className="w-full sm:w-auto bg-primary hover:bg-primary/90"
+                >
                   Enviar Mensagem
                 </Button>
               </form>
@@ -133,17 +170,17 @@ const Contact = () => {
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  {/*<div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
+                   <div>
                     <h4 className="font-medium text-foreground">Localização</h4>
                     <p className="text-muted-foreground">
                       Rua das Flores, 123 - Sala 45<br />
                       Centro, São Paulo - SP<br />
                       CEP: 01234-567
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex items-start space-x-4">
@@ -153,9 +190,11 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-foreground">Telefone</h4>
                     <p className="text-muted-foreground">
-                      (11) 99999-9999<br />
-                      Segunda a sexta: 8h às 18h<br />
-                      Sábados: 8h às 12h
+                      (11) 99999-9999
+                      <br />
+                      Segunda a sexta: 18h às 21h
+                      <br />
+                      Sábados: 9h às 12h
                     </p>
                   </div>
                 </div>
@@ -167,7 +206,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-foreground">E-mail</h4>
                     <p className="text-muted-foreground">
-                      contato@dranasilva.com.br
+                      contato@eloizalima.com.br
                     </p>
                   </div>
                 </div>
@@ -176,19 +215,21 @@ const Contact = () => {
 
             {/* Social Media */}
             <div>
-              <h4 className="font-medium text-foreground mb-4">Siga-me nas redes sociais</h4>
+              <h4 className="font-medium text-foreground mb-4">
+                Siga-me nas redes sociais
+              </h4>
               <div className="flex space-x-4">
-                <a 
-                  href="https://instagram.com/dranasilva" 
-                  target="_blank" 
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
                 >
                   <Instagram className="w-6 h-6 text-primary" />
                 </a>
-                <a 
-                  href="https://linkedin.com/in/dranasilva" 
-                  target="_blank" 
+                <a
+                  href="https://linkedin.com/in/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
                 >
@@ -199,10 +240,13 @@ const Contact = () => {
 
             {/* Privacy Note */}
             <div className="bg-muted/50 p-6 rounded-xl">
-              <h4 className="font-medium text-foreground mb-2">Privacidade e Sigilo</h4>
+              <h4 className="font-medium text-foreground mb-2">
+                Privacidade e Sigilo
+              </h4>
               <p className="text-sm text-muted-foreground">
-                Todas as informações compartilhadas são tratadas com total sigilo e confidencialidade, 
-                conforme o Código de Ética do Psicólogo.
+                Todas as informações compartilhadas são tratadas com total
+                sigilo e confidencialidade, conforme o Código de Ética do
+                Psicólogo.
               </p>
             </div>
           </div>

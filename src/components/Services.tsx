@@ -10,12 +10,6 @@ const Services = () => {
       duration: "50 min",
     },
     {
-      icon: Users,
-      title: "Terapia de Casal",
-      description: "Trabalho focado na melhoria da comunicação, resolução de conflitos e fortalecimento do relacionamento.",
-      duration: "60 min",
-    },
-    {
       icon: Video,
       title: "Atendimento Online",
       description: "Sessões por videochamada com a mesma qualidade do atendimento presencial, no conforto da sua casa.",
@@ -43,7 +37,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div 
               key={index}

@@ -54,7 +54,7 @@ const Appointment = () => {
                 </div>
                 <Button 
                   className="w-full bg-blue-600 hover:bg-blue-700 rounded-2xl h-12"
-                  onClick={() => window.open('https://calendly.com/dranasilva', '_blank')}
+                  onClick={() => window.open('https://calendly.com/', '_blank')}
                 >
                   Agendar
                   <ArrowRight size={16} className="ml-2" />

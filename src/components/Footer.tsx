@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="text-center space-y-8">
           {/* Logo */}
           <div className="font-serif text-3xl font-medium text-primary">
-            Dra. Ana Silva
+            Eloiza Lima
           </div>
           
           {/* Tagline */}
@@ -18,7 +18,7 @@ const Footer = () => {
           
           {/* Professional Info */}
           <div className="space-y-3 text-muted-foreground font-light">
-            <p>CRP 06/123456 - Psicóloga Clínica</p>
+            <p>CRP 06/220078 - Psicóloga Clínica</p>
             <p>Especialista em Terapia Cognitivo-Comportamental</p>
           </div>
           
@@ -27,8 +27,8 @@ const Footer = () => {
           
           {/* Copyright */}
           <div className="flex items-center justify-center space-x-3 text-muted-foreground font-light">
-            <span>© 2024 Dra. Ana Silva. Todos os direitos reservados.</span>
-            <Heart size={16} className="text-primary/60" />
+            <span>© 2025 Eloiza Lima. Todos os direitos reservados.</span>
+            {/* <Heart size={16} className="text-primary/60" /> */}
           </div>
           
           {/* Additional Info */}

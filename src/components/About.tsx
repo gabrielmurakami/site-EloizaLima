@@ -31,8 +31,8 @@ const About = () => {
 
             <div className="space-y-8 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
-                Sou psicóloga formada pela Universidade Federal, com especialização em 
-                Terapia Cognitivo-Comportamental e mais de 8 anos de experiência dedicados 
+                Sou psicóloga formada pela Universidade São Francisco, com especialização em 
+                Terapia Cognitivo-Comportamental e *mais de 8 anos de experiência* dedicados 
                 ao cuidado da saúde mental.
               </p>
               
@@ -76,7 +76,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground text-lg">Experiência</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">8+ anos</p>
+                  <p className="text-sm text-muted-foreground font-light mt-1">2+ anos</p>
                 </div>
               </div>
             </div>

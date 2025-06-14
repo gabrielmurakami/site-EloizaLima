@@ -15,7 +15,7 @@ const Hero = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-foreground leading-tight">
-                Dra. Ana Silva
+                Eloiza Lima
               </h1>
               
               <div className="w-20 h-0.5 bg-primary/30 rounded-full"></div>
@@ -28,7 +28,7 @@ const Hero = () => {
             
             <div className="flex items-center space-x-4 text-primary/70">
               <Heart size={18} className="text-primary/50" />
-              <span className="text-sm font-medium">Cuidando com dedicação desde 2015</span>
+              <span className="text-sm font-medium">Cuidando com dedicação desde 2021</span>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ const Hero = () => {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-accent to-secondary shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Dra. Ana Silva - Psicóloga"
+                  alt="Eloiza Lima - Psicóloga"
                   className="w-full h-full object-cover"
                 />
               </div>
