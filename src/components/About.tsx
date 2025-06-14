@@ -3,12 +3,12 @@ import { GraduationCap, Heart, Users } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="sobre" className="section-padding bg-white">
+    <section id="sobre" className="section-padding bg-primary">
       <div className="max-w-6xl mx-auto container-padding">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-secondary to-accent">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-background to-background/80">
               <img 
                 src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Ambiente acolhedor de terapia"
@@ -16,20 +16,20 @@ const About = () => {
               />
             </div>
             {/* Subtle Decorative Elements */}
-            <div className="absolute -top-6 -left-6 w-20 h-20 bg-primary/5 rounded-full -z-10"></div>
-            <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-accent/30 rounded-full -z-10"></div>
+            <div className="absolute -top-6 -left-6 w-20 h-20 bg-background/20 rounded-full -z-10"></div>
+            <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-background/30 rounded-full -z-10"></div>
           </div>
 
           {/* Content */}
           <div className="space-y-10 order-1 lg:order-2">
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-serif text-foreground leading-tight">
+              <h2 className="text-4xl md:text-5xl font-serif text-background leading-tight">
                 Sobre mim
               </h2>
-              <div className="w-16 h-0.5 bg-primary/30 rounded-full"></div>
+              <div className="w-16 h-0.5 bg-background/30 rounded-full"></div>
             </div>
 
-            <div className="space-y-8 text-muted-foreground leading-relaxed text-lg font-light">
+            <div className="space-y-8 text-background/80 leading-relaxed text-lg font-light">
               <p>
                 Sou psicóloga formada pela Universidade São Francisco, com especialização em 
                 Terapia Cognitivo-Comportamental e *mais de 8 anos de experiência* dedicados 
@@ -51,32 +51,32 @@ const About = () => {
             {/* Features */}
             <div className="grid sm:grid-cols-3 gap-8 pt-6">
               <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <GraduationCap className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-background/20 rounded-2xl flex items-center justify-center mx-auto">
+                  <GraduationCap className="w-8 h-8 text-background" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Formação</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">Especialização em TCC</p>
+                  <h3 className="font-medium text-background text-lg">Formação</h3>
+                  <p className="text-sm text-background/70 font-light mt-1">Especialização em TCC</p>
                 </div>
               </div>
 
               <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <Heart className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-background/20 rounded-2xl flex items-center justify-center mx-auto">
+                  <Heart className="w-8 h-8 text-background" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Abordagem</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">Humanizada</p>
+                  <h3 className="font-medium text-background text-lg">Abordagem</h3>
+                  <p className="text-sm text-background/70 font-light mt-1">Humanizada</p>
                 </div>
               </div>
 
               <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mx-auto">
-                  <Users className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-background/20 rounded-2xl flex items-center justify-center mx-auto">
+                  <Users className="w-8 h-8 text-background" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground text-lg">Experiência</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">2+ anos</p>
+                  <h3 className="font-medium text-background text-lg">Experiência</h3>
+                  <p className="text-sm text-background/70 font-light mt-1">2+ anos</p>
                 </div>
               </div>
             </div>

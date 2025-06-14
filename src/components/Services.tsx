@@ -1,3 +1,4 @@
+
 import { Users, User, Video, MapPin } from "lucide-react";
 
 const Services = () => {
@@ -26,14 +27,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="section-padding bg-secondary/20">
+    <section id="servicos" className="section-padding bg-primary/70">
       <div className="max-w-6xl mx-auto container-padding">
         <div className="text-center space-y-6 mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif text-foreground">
+          <h2 className="text-4xl md:text-5xl font-serif text-background">
             Serviços
           </h2>
-          <div className="w-16 h-0.5 bg-primary/30 rounded-full mx-auto"></div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <div className="w-16 h-0.5 bg-background/30 rounded-full mx-auto"></div>
+          <p className="text-xl text-background/80 max-w-2xl mx-auto font-light leading-relaxed">
             Ofereco diferentes modalidades de atendimento para atender às suas
             necessidades de forma personalizada e acolhedora.
           </p>
@@ -43,24 +44,24 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-10 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group"
+              className="bg-primary p-10 rounded-3xl border border-background/20 hover:shadow-lg smooth-transition group"
             >
               <div className="space-y-8">
-                <div className="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 smooth-transition">
-                  <service.icon className="w-10 h-10 text-primary" />
+                <div className="w-20 h-20 bg-background/20 rounded-2xl flex items-center justify-center group-hover:bg-background/30 smooth-transition">
+                  <service.icon className="w-10 h-10 text-background" />
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-serif text-foreground">
+                  <h3 className="text-2xl font-serif text-background">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
+                  <p className="text-background/80 leading-relaxed font-light">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-border/50">
-                  <span className="text-sm font-medium text-primary">
+                <div className="pt-4 border-t border-background/20">
+                  <span className="text-sm font-medium text-background">
                     Duração: {service.duration}
                   </span>
                 </div>
@@ -70,36 +71,36 @@ const Services = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="bg-white p-10 rounded-3xl border border-border/50">
-          <h3 className="text-2xl font-serif text-foreground mb-8 text-center">
+        <div className="bg-primary p-10 rounded-3xl border border-background/20">
+          <h3 className="text-2xl font-serif text-background mb-8 text-center">
             Informações Importantes
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">
+              <strong className="text-background block text-lg">
                 Horários
               </strong>
-              <p className="text-muted-foreground font-light">
+              <p className="text-background/80 font-light">
                 Segunda a sexta: 18h às 21h
                 <br />
                 Sábados: 9h às 12h
               </p>
             </div>
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">
+              <strong className="text-background block text-lg">
                 Modalidades
               </strong>
-              <p className="text-muted-foreground font-light">
+              <p className="text-background/80 font-light">
                 Presencial e online
                 <br />
                 Individual e casal
               </p>
             </div>
             <div className="space-y-3">
-              <strong className="text-foreground block text-lg">
+              <strong className="text-background block text-lg">
                 Abordagem
               </strong>
-              <p className="text-muted-foreground font-light">
+              <p className="text-background/80 font-light">
                 Terapia Cognitivo-Comportamental
                 <br />
                 Técnicas humanísticas
