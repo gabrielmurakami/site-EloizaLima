@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -57,14 +56,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="section-padding bg-primary">
+    <section id="contato" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-background">
+          <h2 className="text-3xl md:text-4xl font-serif text-foreground">
             Entre em Contato
           </h2>
-          <div className="w-16 h-1 bg-background rounded-full mx-auto"></div>
-          <p className="text-lg text-background/80 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Estou aqui para ajudar. Entre em contato para tirar dúvidas ou
             agendar sua consulta.
           </p>
@@ -74,7 +73,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-serif text-background mb-6">
+              <h3 className="text-2xl font-serif text-foreground mb-6">
                 Envie uma Mensagem
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -82,7 +81,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-background mb-2"
+                      className="block text-sm font-medium text-foreground mb-2"
                     >
                       Nome *
                     </label>
@@ -93,14 +92,14 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-background/10 border-background/20 text-background placeholder:text-background/60"
+                      className="w-full"
                       placeholder="Seu nome completo"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-background mb-2"
+                      className="block text-sm font-medium text-foreground mb-2"
                     >
                       Telefone
                     </label>
@@ -110,7 +109,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-background/10 border-background/20 text-background placeholder:text-background/60"
+                      className="w-full"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -119,7 +118,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-background mb-2"
+                    className="block text-sm font-medium text-foreground mb-2"
                   >
                     E-mail *
                   </label>
@@ -130,7 +129,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-background/10 border-background/20 text-background placeholder:text-background/60"
+                    className="w-full"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -138,7 +137,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-background mb-2"
+                    className="block text-sm font-medium text-foreground mb-2"
                   >
                     Mensagem *
                   </label>
@@ -148,14 +147,14 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full h-32 resize-none bg-background/10 border-background/20 text-background placeholder:text-background/60"
+                    className="w-full h-32 resize-none"
                     placeholder="Conte um pouco sobre o que gostaria de conversar..."
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full sm:w-auto bg-background text-primary hover:bg-background/90"
+                  className="w-full sm:w-auto bg-primary hover:bg-primary/90"
                 >
                   Enviar Mensagem
                 </Button>
@@ -166,17 +165,31 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-serif text-background mb-6">
+              <h3 className="text-2xl font-serif text-foreground mb-6">
                 Informações de Contato
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-background" />
+                  {/*<div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                   <div>
+                    <h4 className="font-medium text-foreground">Localização</h4>
+                    <p className="text-muted-foreground">
+                      Rua das Flores, 123 - Sala 45<br />
+                      Centro, São Paulo - SP<br />
+                      CEP: 01234-567
+                    </p>
+                  </div> */}
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-background">Telefone</h4>
-                    <p className="text-background/80">
+                    <h4 className="font-medium text-foreground">Telefone</h4>
+                    <p className="text-muted-foreground">
                       (11) 99999-9999
                       <br />
                       Segunda a sexta: 18h às 21h
@@ -187,12 +200,12 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-background" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-background">E-mail</h4>
-                    <p className="text-background/80">
+                    <h4 className="font-medium text-foreground">E-mail</h4>
+                    <p className="text-muted-foreground">
                       contato@eloizalima.com.br
                     </p>
                   </div>
@@ -202,7 +215,7 @@ const Contact = () => {
 
             {/* Social Media */}
             <div>
-              <h4 className="font-medium text-background mb-4">
+              <h4 className="font-medium text-foreground mb-4">
                 Siga-me nas redes sociais
               </h4>
               <div className="flex space-x-4">
@@ -210,27 +223,27 @@ const Contact = () => {
                   href="https://instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center hover:bg-background/30 smooth-transition"
+                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
                 >
-                  <Instagram className="w-6 h-6 text-background" />
+                  <Instagram className="w-6 h-6 text-primary" />
                 </a>
                 <a
                   href="https://linkedin.com/in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center hover:bg-background/30 smooth-transition"
+                  className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
                 >
-                  <Linkedin className="w-6 h-6 text-background" />
+                  <Linkedin className="w-6 h-6 text-primary" />
                 </a>
               </div>
             </div>
 
             {/* Privacy Note */}
-            <div className="bg-background/10 p-6 rounded-xl">
-              <h4 className="font-medium text-background mb-2">
+            <div className="bg-muted/50 p-6 rounded-xl">
+              <h4 className="font-medium text-foreground mb-2">
                 Privacidade e Sigilo
               </h4>
-              <p className="text-sm text-background/80">
+              <p className="text-sm text-muted-foreground">
                 Todas as informações compartilhadas são tratadas com total
                 sigilo e confidencialidade, conforme o Código de Ética do
                 Psicólogo.
