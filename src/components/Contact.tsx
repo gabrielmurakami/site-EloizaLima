@@ -22,7 +22,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_k0latgo",
+        "service_c5g5rmi",
         "template_bcnrj78",
         formData, // precisa bater com os campos definidos no template
         "16D2yOXa_MNQ0p0yI" // sua chave pública
@@ -218,7 +218,7 @@ const Contact = () => {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/"
+                  href="https://www.instagram.com/psieloizalima/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
