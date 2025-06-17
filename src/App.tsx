@@ -13,7 +13,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL}> {/* basename={import.meta.env.DEV ? "/" : "/site-EloizaLima/"} */}        
+      <BrowserRouter basename="/">
+        {/* basename={import.meta.env.DEV ? "/" : "/site-EloizaLima/"} */}
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
