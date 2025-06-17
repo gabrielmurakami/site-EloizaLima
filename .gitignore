@@ -9,9 +9,9 @@ lerna-debug.log*
 
 node_modules/
 *.local
-!src
-!dist
-!public
+!src/
+!dist/
+!public/
 
 # Editor directories and files
 .vscode/*
