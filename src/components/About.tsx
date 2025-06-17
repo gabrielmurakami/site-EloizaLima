@@ -1,5 +1,5 @@
-
-import { GraduationCap, Heart, Users } from 'lucide-react';
+import { GraduationCap, Heart, Users } from "lucide-react";
+import img from "../assets/aboutme.png";
 
 const About = () => {
   return (
@@ -9,8 +9,9 @@ const About = () => {
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-secondary to-accent">
-              <img 
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              <img
+                src={img}
+                //src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Ambiente acolhedor de terapia"
                 className="w-full h-full object-cover"
               />
@@ -31,20 +32,20 @@ const About = () => {
 
             <div className="space-y-8 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
-                Sou psicóloga formada pela Universidade São Francisco, com especialização em 
-                Terapia Cognitivo-Comportamental e *mais de 8 anos de experiência* dedicados 
-                ao cuidado da saúde mental.
+                Sou psicóloga formada pela Universidade São Francisco, com
+                especialização em Terapia Cognitivo-Comportamental e *mais de 8
+                anos de experiência* dedicados ao cuidado da saúde mental.
               </p>
-              
+
               <p>
-                Minha abordagem é centrada no acolhimento e na escuta ativa, criando um 
-                ambiente seguro onde você pode se expressar livremente e encontrar 
-                caminhos para o bem-estar.
+                Minha abordagem é centrada no acolhimento e na escuta ativa,
+                criando um ambiente seguro onde você pode se expressar
+                livremente e encontrar caminhos para o bem-estar.
               </p>
-              
+
               <p>
-                Acredito que cada pessoa possui recursos únicos para superar desafios 
-                e construir uma vida mais plena e significativa.
+                Acredito que cada pessoa possui recursos únicos para superar
+                desafios e construir uma vida mais plena e significativa.
               </p>
             </div>
 
@@ -55,8 +56,12 @@ const About = () => {
                   <GraduationCap className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-primary-foreground text-lg">Formação</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">Especialização em TCC</p>
+                  <h3 className="font-medium text-primary-foreground text-lg">
+                    Formação
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-light mt-1">
+                    Especialização em TCC
+                  </p>
                 </div>
               </div>
 
@@ -65,8 +70,12 @@ const About = () => {
                   <Heart className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-primary-foreground text-lg">Abordagem</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">Humanizada</p>
+                  <h3 className="font-medium text-primary-foreground text-lg">
+                    Abordagem
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-light mt-1">
+                    Humanizada
+                  </p>
                 </div>
               </div>
 
@@ -75,8 +84,12 @@ const About = () => {
                   <Users className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-primary-foreground text-lg">Experiência</h3>
-                  <p className="text-sm text-muted-foreground font-light mt-1">2+ anos</p>
+                  <h3 className="font-medium text-primary-foreground text-lg">
+                    Experiência
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-light mt-1">
+                    2+ anos
+                  </p>
                 </div>
               </div>
             </div>

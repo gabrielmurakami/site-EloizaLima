@@ -190,11 +190,11 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-foreground">Telefone</h4>
                     <p className="text-foreground">
-                      (11) 99999-9999
+                      (19) 99434-5748
                       <br />
-                      Segunda a sexta: 18h às 21h
+                      Segunda a sexta: 18h às 22h
                       <br />
-                      Sábados: 9h às 12h
+                      Sábados: a combinar
                     </p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground">E-mail</h4>
-                    <p className="text-foreground">contato@eloizalima.com.br</p>
+                    <p className="text-foreground">psieloizalima@icloud.com</p>
                   </div>
                 </div>
               </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                   <Instagram className="w-6 h-6 text-primary" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://www.linkedin.com/in/eloiza-lima-0b239423a/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 smooth-transition"
@@ -237,7 +237,7 @@ const Contact = () => {
             </div>
 
             {/* Privacy Note */}
-            <div className="bg-muted/50 p-6 rounded-xl">
+            <div className="bg-muted/50 rounded-xl">
               <h4 className="font-medium text-foreground mb-2">
                 Privacidade e Sigilo
               </h4>

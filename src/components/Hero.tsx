@@ -1,5 +1,5 @@
 import { Heart, Sparkles } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/people.png";
 
 const Hero = () => {
   return (
@@ -47,8 +47,7 @@ const Hero = () => {
             <div className="relative w-full max-w-lg mx-auto">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-accent to-secondary shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  // src={logo} 
+                  src={logo}
                   alt="Eloiza Lima - Psicóloga"
                   className="w-full h-full object-cover"
                 />
