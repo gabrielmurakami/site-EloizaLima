@@ -82,7 +82,7 @@ const Services = () => {
               <p className="text-muted-foreground font-light">
                 Segunda a sexta: 18h às 22h
                 <br />
-                Sábados: 9h às 12h
+                Sábados: a combinar
               </p>
             </div>
             <div className="space-y-3">
