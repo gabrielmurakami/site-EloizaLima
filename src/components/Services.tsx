@@ -7,22 +7,22 @@ const Services = () => {
       title: "Terapia Individual",
       description:
         "Atendimento personalizado para questões como ansiedade, depressão, autoestima e desenvolvimento pessoal.",
-      duration: "50 min",
+      duration: "1 h",
     },
     {
       icon: Video,
       title: "Atendimento Online",
       description:
         "Sessões por videochamada com a mesma qualidade do atendimento presencial, no conforto da sua casa.",
-      duration: "50 min",
+      duration: "1 h",
     },
-    {
-      icon: MapPin,
-      title: "Atendimento Presencial",
-      description:
-        "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
-      duration: "50 min",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Atendimento Presencial",
+    //   description:
+    //     "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
+    //   duration: "50 min",
+    // },
   ];
 
   return (
@@ -39,7 +39,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
@@ -80,7 +80,7 @@ const Services = () => {
                 Horários
               </strong>
               <p className="text-muted-foreground font-light">
-                Segunda a sexta: 18h às 21h
+                Segunda a sexta: 18h às 22h
                 <br />
                 Sábados: 9h às 12h
               </p>
@@ -90,9 +90,10 @@ const Services = () => {
                 Modalidades
               </strong>
               <p className="text-muted-foreground font-light">
-                Presencial e online
+                {/* Presencial */}
+                Online e
                 <br />
-                Individual e casal
+                Individual
               </p>
             </div>
             <div className="space-y-3">

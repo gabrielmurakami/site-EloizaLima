@@ -33,8 +33,8 @@ const About = () => {
             <div className="space-y-8 text-muted-foreground leading-relaxed text-lg font-light">
               <p>
                 Sou psicóloga formada pela Universidade São Francisco, com
-                especialização em Terapia Cognitivo-Comportamental e *mais de 8
-                anos de experiência* dedicados ao cuidado da saúde mental.
+                especialização em Terapia Cognitivo-Comportamental e mais de 2
+                anos de experiência dedicados ao cuidado da saúde mental.
               </p>
 
               <p>

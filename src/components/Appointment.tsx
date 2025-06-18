@@ -18,7 +18,7 @@ const Appointment = () => {
           </div>
 
           {/* Contact Options */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-8 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group">
               <div className="space-y-6">
                 <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-green-100 smooth-transition">
@@ -47,7 +47,7 @@ const Appointment = () => {
               </div>
             </div>
 
-            {/* <div className="bg-white p-8 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group">
+            <div className="bg-white p-8 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group">
               <div className="space-y-6">
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-blue-100 smooth-transition">
                   <Calendar className="w-8 h-8 text-blue-600" />
@@ -64,7 +64,7 @@ const Appointment = () => {
                   className="w-full bg-blue-600 hover:bg-blue-700 rounded-2xl h-12 text-primary"
                   onClick={() =>
                     window.open(
-                      "https://calendly.com/egabrielmurakami/atendimentos",
+                      "https://calendly.com/psieloizalima/30min",
                       "_blank"
                     )
                   }
@@ -73,7 +73,7 @@ const Appointment = () => {
                   <ArrowRight size={16} className="ml-2" />
                 </Button>
               </div>
-            </div> */}
+            </div>
 
             <div className="bg-white p-8 rounded-3xl border border-border/50 hover:shadow-lg smooth-transition group">
               <div className="space-y-6">
