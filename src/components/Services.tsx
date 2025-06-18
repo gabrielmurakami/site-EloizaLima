@@ -7,13 +7,18 @@ const Services = () => {
       title: "Terapia Individual",
       description:
         "Atendimento personalizado para questões como ansiedade, depressão, autoestima e desenvolvimento pessoal.",
+<<<<<<< Updated upstream
       duration: "1 h",
+=======
+      duration: "50 min",
+>>>>>>> Stashed changes
     },
     {
       icon: Video,
       title: "Atendimento Online",
       description:
         "Sessões por videochamada com a mesma qualidade do atendimento presencial, no conforto da sua casa.",
+<<<<<<< Updated upstream
       duration: "1 h",
     },
     // {
@@ -23,6 +28,17 @@ const Services = () => {
     //     "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
     //   duration: "50 min",
     // },
+=======
+      duration: "50 min",
+    },
+    {
+      icon: MapPin,
+      title: "Atendimento Presencial",
+      description:
+        "Consultas no consultório, em ambiente acolhedor e seguro, localizado no centro da cidade.",
+      duration: "50 min",
+    },
+>>>>>>> Stashed changes
   ];
 
   return (
@@ -39,7 +55,11 @@ const Services = () => {
           </p>
         </div>
 
+<<<<<<< Updated upstream
         <div className="grid md:grid-cols-2 gap-8 mb-16">
+=======
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+>>>>>>> Stashed changes
           {services.map((service, index) => (
             <div
               key={index}
@@ -80,9 +100,15 @@ const Services = () => {
                 Horários
               </strong>
               <p className="text-muted-foreground font-light">
+<<<<<<< Updated upstream
                 Segunda a sexta: 18h às 22h
                 <br />
                 Sábados: a combinar
+=======
+                Segunda a sexta: 18h às 21h
+                <br />
+                Sábados: 9h às 12h
+>>>>>>> Stashed changes
               </p>
             </div>
             <div className="space-y-3">
@@ -90,10 +116,16 @@ const Services = () => {
                 Modalidades
               </strong>
               <p className="text-muted-foreground font-light">
+<<<<<<< Updated upstream
                 {/* Presencial */}
                 Online e
                 <br />
                 Individual
+=======
+                Presencial e online
+                <br />
+                Individual e casal
+>>>>>>> Stashed changes
               </p>
             </div>
             <div className="space-y-3">

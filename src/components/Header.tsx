@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+<<<<<<< Updated upstream
 import logo from "../assets/logo.png";
+=======
+>>>>>>> Stashed changes
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +72,11 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
+<<<<<<< Updated upstream
           <div className="md:hidden py-6 border-t border-border/50 animate-fade-in-up">
+=======
+          <div className="md:hidden py-6 border-t border-border/50 animate-fade-in-up ">
+>>>>>>> Stashed changes
             <nav className="flex flex-col space-y-6">
               <button
                 onClick={() => scrollToSection("inicio")}
